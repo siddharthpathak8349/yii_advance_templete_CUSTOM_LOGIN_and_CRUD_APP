@@ -14,3 +14,7 @@ Step - 7 (Model)               Copy   "COMMON -> MODELS -> LoginForm , SignupFor
 
 
 Step - 8 (__CRUD APP__)         Fully Login System With CRUD  (without login you shold not do any operation)
+
+Aditonnaly  Information ::=>
+
+* create  table in DB  with the use of Migration  ( php yii migrate/create create_book_table )  after write in Migration file  run ( php yii migrate )
