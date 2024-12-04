@@ -1,13 +1,16 @@
-Step - 1           run command to  work in Backed  without host :- php -S localhost:8080 -t backend/web
+Step - 1                        run command to  work in Backed  without host :- php -S localhost:8080 -t backend/web
 
-Step - 2           php init  (to setup project BACKEND & COMMON)
+Step - 2                        php init  (to setup project BACKEND & COMMON)
 
-Step - 3           DB Connect  Common -> Config -> main-local.php
+Step - 3                        DB Connect  Common -> Config -> main-local.php
 
-Step - 4           php yii migrate
+Step - 4                        php yii migrate
 
 Step - 5 (controller)          Copy   "__BACKEND -> SiteController__"  Form  Github  "
 
 Step - 6 (Views)               Copy   "__BACKEND -> VIEWS -> SITE folder ( login,signup ) __  From Github"
 
 Step - 7 (Model)               Copy   "COMMON -> MODELS -> LoginForm , SignupForm , User"
+
+
+Step - 8 (__CRUD APP__)         Fully Login System With CRUD  (without login you shold not do any operation)
