@@ -6,8 +6,8 @@ Step - 3           DB Connect  Common -> Config -> main-local.php
 
 Step - 4           php yii migrate
 
-Step - 5 (controller)          Copy   "__Backend -> SiteController__"  Form  Github  "
+Step - 5 (controller)          Copy   "__BACKEND -> SiteController__"  Form  Github  "
 
-Step - 6 (Views)               Copy   "__Backend -> Views -> Site folder ( login,signup ) __  From Github"
+Step - 6 (Views)               Copy   "__BACKEND -> VIEWS -> SITE folder ( login,signup ) __  From Github"
 
 Step - 7 (Model)               Copy   "COMMON -> MODELS -> LoginForm , SignupForm , User"
