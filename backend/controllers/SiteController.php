@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use common\models\LoginForm;
+use common\models\SignupForm;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -24,11 +25,13 @@ class SiteController extends Controller
                 'class' => AccessControl::class,
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        // Allow 'login', 'error', and 'signup' for everyone
+                        'actions' => ['login', 'error', 'signup'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        // Restrict 'logout' and 'index' to authenticated users
+                        'actions' => ['logout', 'billu', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -42,6 +45,7 @@ class SiteController extends Controller
             ],
         ];
     }
+
 
     /**
      * {@inheritdoc}
@@ -61,6 +65,11 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex()
+    {
+        return $this->render('index');
+    }
+
+    public function actionBillu()
     {
         return $this->render('index');
     }
@@ -89,6 +98,22 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function actionSignup()
+    {
+        $model = new SignupForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->signup()) {
+            Yii::$app->session->setFlash('success', 'Signup successful!');
+            return $this->redirect(['site/login']);
+        }
+
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+
+
 
     /**
      * Logout action.

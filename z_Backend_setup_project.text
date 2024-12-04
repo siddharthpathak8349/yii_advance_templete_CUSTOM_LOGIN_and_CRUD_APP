@@ -1,3 +1,0 @@
-Step - 1           run command to  work in Backed  without host :- php -S localhost:8080 -t backend/web
-
-Step - 2           php init  (to setup project BACKEND & COMMON)
